@@ -2,7 +2,9 @@ import webbrowser
 
 def website_opener(domain):
     try:
-        url = 'https://www.' + domain
+        if ".com" not in domain:
+            domain = domain + ".com"
+        url =  domain
         webbrowser.open(url)
         return True
     except Exception as e:

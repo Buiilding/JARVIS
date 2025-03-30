@@ -54,11 +54,12 @@ pyqt5-tools==5.15.2.3
 PyRect==0.1.4
 PyScreeze==0.1.26
 python-dotenv==0.15.0
-pyttsx3==2.90
+# pyttsx3==2.90
 PyTweening==1.0.3
 pytz==2020.4
 pywhatkit==3.2
-pywin32==300
+# pywin32==300
+pywin32==303
 qt5-applications==5.15.2.2.1
 qt5-tools==5.15.2.1.0.1
 ratelim==0.1.6
