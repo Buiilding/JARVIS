@@ -35,8 +35,6 @@ Follow these rules precisely:
 *   `send_mail`: Sends an email to a predefined recipient nickname.
     *   `args`: [`recipient_nickname`: string, `subject`: string, `message`: string] (e.g., ["myself", "Meeting Reminder", "Don't forget the 3 PM meeting"])
     *   *Note:* `recipient_nickname` must be one of the known keys like 'myself'.
-*   `calculate`: Computes mathematical questions using WolframAlpha.
-    *   `args`: [`mathematical_question`: string] (e.g., ["what is 5 plus 7 times 3"])
 *   `where_is`: Finds the location and distance of a place.
     *   `args`: [`place_name`: string] (e.g., ["Eiffel Tower"])
 *   `my_location`: Reports the user's current detected location.
@@ -44,8 +42,6 @@ Follow these rules precisely:
 *   `take_screenshot`: Takes a screenshot and saves it with a given name.
     *   `args`: [`save_name`: string] (e.g., ["desktop_view"])
 *   `show_screenshot`: Displays the most recently saved screenshot. (Requires `take_screenshot` to have been used before).
-    *   `args`: []
-*   `get_joke`: Tells a random programming joke.
     *   `args`: []
 *   `system_info`: Reports system information like CPU and RAM usage.
     *   `args`: []
@@ -59,6 +55,8 @@ Follow these rules precisely:
     *   `args`: []
 *   `describe_screen`: Describes the current screen that the user is seeing
     *   `args`: []
+*   `browser_use`: Use an autonomous browser agent to perform complex tasks on the web that require navigating websites, searching, extracting specific information, summarizing content, or interacting with web elements. Use this for tasks like 'Find recent AI engineer job postings from startup companies', 'Summarize the latest news about renewable energy from these three websites', or 'Look up the contact information for the lead researcher on the Project Starlight paper'. Do NOT use for simple single Google searches (`search_anything_google`) or opening one specific website URL (`website_opener`).
+    *   `args`: [`detailed_task_description`: string] (e.g., ["Find the top 3 AI startups mentioned in TechCrunch articles this month and list their CEOs"])
 *   `goodbye`: Initiates the shutdown sequence for Jarvis.
     *   `args`: []
 
