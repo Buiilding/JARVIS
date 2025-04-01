@@ -341,20 +341,6 @@ def startup():
     else:
         speak("Good evening Sir")
 
-    # Check internet connection (basic check)
-    try:
-        requests.get("https://google.com", timeout=5)
-        speak("Internet connection is active.")
-        print("✅ Internet Connection Active")
-    except requests.ConnectionError:
-        print("⚠️  Warning: No internet connection.")
-        speak("Warning, I cannot connect to the internet.")
-
-    c_time = obj.tell_time()
-    speak(f"Currently it is {c_time}")
-    time.sleep(3)
-    speak("I am Jarvis. Online and ready sir. How may I help you?")
-
 # --- Signal Handler (from real-time script) ---
 def signal_handler(sig, frame):
     """ Handles Ctrl+C or planned shutdown for graceful exit. """
@@ -410,7 +396,6 @@ if __name__ == "__main__":
 
     try:
         obj = JarvisAssistant()
-        print("✅ Jarvis Assistant Initialized")
 
                 # --- Gemini API Configuration ---
         GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
